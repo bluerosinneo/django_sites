@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for site in site_list %}
+<div>
+    <h2><a href="{% url 'site_detail' site.pk %}">{{ site.title }}</a></h2>
+    <p>{{ site.description }}</p>
+</div>
+{% endfor %}
+{% endblock content %}
